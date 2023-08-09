@@ -3,5 +3,4 @@ pandas
 streamlit
 torch
 torchvision
-captum
 matplotlib

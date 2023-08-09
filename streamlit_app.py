@@ -6,9 +6,14 @@ import streamlit as st
 import torch
 print("PyTorch Version :{}".format(torch.__version__))
 import torchvision
-import captum
+print("TorchVision Version :{}".format(torchvision.__version__))
+
 import matplotlib
+print("Matplotlib Version :{}".format(matplotlib.__version__))
+
 import numpy as np
+print("Numpy Version :{}".format(np.__version__))
+
 
 
 """
