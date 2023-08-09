@@ -17,7 +17,7 @@ print("Numpy Version :{}".format(np.__version__))
 
 
 """
-# Welcome to Streamlit!
+# Welcome to Streamlit! A
 
 Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 
