@@ -61,8 +61,19 @@ len(categories), categories[:5]
 
 # Make Prediction
 from PIL import Image
-#shark = Image.open("https://fisheries.noaa.gov/s3/dam-migration/750x500-shortfin-mako-conlin-swfsc.jpg")
 shark = Image.open("shark.jpg")
 
 shark.size
 shark
+#preprocess image
+processed_img = preprocess_func(shark)
+processed_img.shape
+#predict
+probs = model(processed_img.unsqueeze(0))
+probs = probs.softmax(1)
+probs = probs[0].detach().numpy()
+#sort probs
+prob = probs[probs.argsort()[-5:][::-1]]
+idxs = probs.argsort()[-5:][::-1]
+prob, idxs
+categories[idxs]
