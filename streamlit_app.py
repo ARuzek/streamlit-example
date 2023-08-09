@@ -48,3 +48,19 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+
+# Load Model
+from torchvision.models import resnet50, ResNet50_Weights
+
+model = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2)
+model.eval();
+preprocess_func = ResNet50_Weights.IMAGENET1K_V2.transforms()
+preprocess_func
+categories = np.array(ResNet50_Weights.IMAGENET1K_V2.meta["categories"])
+len(categories), categories[:5]
+
+# Make Prediction
+from PIL import Image
+shark = Image.open("https://fisheries.noaa.gov/s3/dam-migration/750x500-shortfin-mako-conlin-swfsc.jpg")
+shark.size
+shark
