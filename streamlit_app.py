@@ -61,6 +61,8 @@ len(categories), categories[:5]
 
 # Make Prediction
 from PIL import Image
-shark = Image.open("https://fisheries.noaa.gov/s3/dam-migration/750x500-shortfin-mako-conlin-swfsc.jpg")
+#shark = Image.open("https://fisheries.noaa.gov/s3/dam-migration/750x500-shortfin-mako-conlin-swfsc.jpg")
+shark = Image.open("shark.jpg")
+
 shark.size
 shark
